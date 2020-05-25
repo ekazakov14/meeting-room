@@ -1,7 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
+import 'firebase/storage';
 
-const Database = {
+const Firebase = {
   config: {
     apiKey: "AIzaSyCAEtCrQ9hp8XLzj5CzlkAZdEg9LwSp2b4",
     authDomain: "meeting-room-a94e4.firebaseapp.com",
@@ -14,9 +15,6 @@ const Database = {
   init() {
     firebase.initializeApp(this.config);
   },
-  instance() {
-    return firebase.database();
-  },
 };
 
-export default Database;
+export default Firebase;
