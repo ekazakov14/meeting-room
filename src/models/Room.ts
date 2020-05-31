@@ -1,12 +1,16 @@
-import BasicModel from './BasicModel';
+import BasicModelFactory from './BasicModel';
 
-type Fields = {
+type RawFields = {
   readonly name: string,
   readonly floor: number,
   readonly minGuestCount: number,
   readonly maxGuestCount: number,
 };
 
-const Room = BasicModel<Fields>('rooms');
+const modifyResult = (item: RawFields) => item;
+
+class Room extends BasicModelFactory<RawFields, RawFields>('rooms', modifyResult) {
+  
+}
 
 export default Room;

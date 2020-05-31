@@ -3,17 +3,16 @@ import firebase from 'firebase';
 type Fields = {
   name: string,
   message: string,
-  type?: string,
+  type?: 'warning' | 'error' | 'info',
+  stack?: string,
 };
 
 const Logger = {
-  add({type = 'warning', ...props}: Fields) {
-    const {stack} = new Error();
-
+  write({type = 'warning', stack = new Error().stack, ...props}: Fields) {
     firebase.database().ref('logs').push({
+      ...props,
       type,
       stack,
-      ...props,
     });
   },
 };
