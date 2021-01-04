@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.button {
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s ease-in, background 0.3s ease-in;
+  border: 0;
+  border-radius: 4px;
+  padding: 0 16px;
+
+  &_size_lg {
+    height: 36px;
+    line-height: 36px;
+  }
+
+  &_theme {
+    &_primary {
+      background: $color-primary;
+      color: #fff;
+
+      &:hover {
+        background: #0058FF;
+      }
+    
+      &:focus {
+        background: #0011fe;
+        outline: none;
+      }
+    }
+
+    &_disabled {
+      background: #E9ECEF;
+      color: #000;
+    }
+  }
+}
