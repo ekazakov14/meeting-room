@@ -1,44 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://user-images.githubusercontent.com/30614068/35501411-de6818cc-04ea-11e8-8a1e-5a594e4be443.png">
 
-## Available Scripts
+> Одностраничное приложение для создания переговорок
 
-In the project directory, you can run:
+При открытии приложения отображается таблица переговорок. Предполагается, что офис начинает работать с 7 часов, и закрывается в 23:59. Каждый блок таблицы равен одному часу. При клике на свободный блок, открывается форма создания нового события. Дата события, комната и этаж подставляются автоматически, остается лишь правильно заполнить оставшиеся поля.
 
-### `yarn start`
+После создания, появляется попап, который дублирует информацию о событии. Блок с событием окрашивается в серый цвет. При клике на него появляется попап с описанием и кнопка редактирования. Нажав на нее открывается окно редактирования, также появляется возможность удаления события.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img src='example.gif'>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+В этом репозитории находятся материалы тестового задания по вёрстке для шестой [Школы разработки интерфейсов](https://academy.yandex.ru/events/frontend/shri_msk-2018).
 
-### `yarn test`
+**Макеты:**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [десктоп](desktop-images)
+- [мобильные телефоны](touch-images)
 
-### `yarn build`
+**Спецификация:**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [десктоп](desktop-guide)
+- [мобильные телефоны](touch-guide)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Задание
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Нужно сверстать страницу списка переговрок и форму редактирования встречи. Для каждой страницы дизайнер подготовил макет (отдельно для большого экрана и мобильных телефонов).
 
-### `yarn eject`
+Важно сверстать страницы в точном соответствии с макетами. Если какие-то части макетов покажутся вам непонятными, обязательно задавайте уточняющие вопросы — пишите на адрес frontendschool@yandex-team.ru.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Страница списка переговорок
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- В шапке отображается логотип сервиса и кнопка «Создать встречу».
+- Слева отображается список переговорок с разбивкой по этажам.
+- Справа от списка отображается диаграмма встреч.
+- При клике на встречу всплывает тултип с информацией о ней.
+- При наведении на свободное время появляется кнопка добавления встречи и подсвечивается название комнаты.
+- Названия переговорок, у которых не осталось свободных периодов времени, отображаются менее контрастно.
+- На диаграмме вертикальной линией показано текущее время.
+- Сверху от списка отображается текущая дата и кнопки перехода к соседним датам.
+- При клике на текущую дату отображается календарь на три месяца.
+- Макет календаря дизайнер не нарисовал, сверстайте этот блок на своё усмотрение.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Страница редактирования встречи
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Есть возможность ввести название встречи, дату и время начала и окончания встречи, выбрать участников и переговорку.
+- Выпадающий календарь для поля выбора даты делать необязательно, но это будет плюсом.
+- Участники встречи выбираются из списка, который появляется, когда пользователь переходит на поле поиска сотрудника.
+- Выбранные участники отображаются под полем ввода.
+- Если переговорка не выбрана, отображается список доступных комнат.
+- Если переговорка выбрана, то вместо списка отображается только она (с возможностью отменить выбор).
 
-## Learn More
+## Критерии
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+В первую очередь мы будем проверять, свёрстаны ли страницы в точном в соответствии с макетами.
+Всё должно работать в двух последних версиях Google Chrome, Яндекс.Браузера, Microsoft Edge, Mozilla Firefox, Safari, Opera. По возможности используйте приёмы безопасной деградации CSS.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Уделите внимание организации и оформлению кода. Оптимизация производительности и автоматизация будут плюсом.
