@@ -1,4 +1,5 @@
 import React from 'react';
+import Container from '../Container';
 import './index.scss';
 
 type Props = {
@@ -7,10 +8,12 @@ type Props = {
 };
 
 const Header = ({logo, actionButton}: Props) => (
-  <header className="header">
-    <a href="/" className="header__logo">{logo}</a>
-    <div className="header__action-button">{actionButton}</div>
-  </header>
+  <Container>
+    <header className="header">
+      <a href="/" className="header__logo">{logo}</a>
+      <div className="header__action-button">{actionButton}</div>
+    </header>
+  </Container>
 );
 
 export default Header;
