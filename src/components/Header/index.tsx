@@ -8,12 +8,14 @@ type Props = {
 };
 
 const Header = ({logo, actionButton}: Props) => (
-  <Container>
-    <header className="header">
-      <a href="/" className="header__logo">{logo}</a>
-      <div className="header__action-button">{actionButton}</div>
-    </header>
-  </Container>
+  <header className="header">
+    <Container>
+      <div className="header__row">
+        <a href="/" className="header__logo">{logo}</a>
+        <div className="header__action-button">{actionButton}</div>
+      </div>
+    </Container>
+  </header>
 );
 
 export default Header;
