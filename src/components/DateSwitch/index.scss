@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.date-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  white-space: nowrap;
+  
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $color-gray;
+    cursor: pointer;
+    fill: rgba(#000, 0.4);
+    transition: fill 0.3s linear;
+
+    &:hover,
+    &:focus {
+      fill: #000;
+    }
+
+    &_next {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__current {
+    margin: 0 14px;
+  }
+}
