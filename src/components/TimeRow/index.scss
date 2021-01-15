@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+
+.time-row {
+  position: relative;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+  padding-left: 30px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__current {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4px 18px;
+    background: $color-primary;
+    color: #fff;
+    border-radius: 100px;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 1px;
+      height: 100vh;
+      background: $color-primary;
+    }
+  }
+
+  &__item {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding: 17.5px 0;
+    pointer-events: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      width: 1px;
+      height: 100vh;
+      background: rgba(19, 100, 205, 0.10);
+    }
+
+    &_state_disabled {
+      color: #858E98;
+    }
+  }
+}
