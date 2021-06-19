@@ -1,10 +1,12 @@
+import Room from './Room';
+
 type Booking = {
-  id: number,
-  dateStart: Date,
-  dateEnd: Date,
-  users: number[],
-  room: number,
-  title: string,
+  readonly id: number,
+  readonly dateStart: Date,
+  readonly dateEnd: Date,
+  readonly users: number[],
+  readonly title: string,
+  readonly room: Room,
 };
 
 export default Booking;
