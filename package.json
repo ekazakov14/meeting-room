@@ -38,7 +38,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.0.0",
+    "node-sass": "^7.0.0",
     "progress-bar-webpack-plugin": "^2.1.0",
     "webpack-bundle-analyzer": "^4.3.0"
   }
